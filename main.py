@@ -83,7 +83,6 @@ def admin_only(f):
         return f(*args, **kwargs)
     return decorated_function
 
-#psswrd=1234567
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id)) #to get the user from db
